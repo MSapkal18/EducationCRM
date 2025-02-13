@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>user</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="footerstyle.css">
+    <style>
+        .col {
+            background-color: #bb8fce;
+        }
+
+        .user {
+            color: solid black;
+
+            font-style: italic;
+        }
+    </style>
+
+
+</head>
+
+<body>
+	<!-- header starts -->
+	    <div th:replace="~{fragments/user-header :: u-header}"></div>
+    <!-- header ends -->
+    <hr style="color: blue;">
+    <!-----------main content start----------->
+    <main class="container-fluid" style="min-height: 550px;">
+        <!-- content -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card shadow" style="width: 18rem;">
+                        <div class="card-body"style="background-color:lightpink">
+                            <div class="text-center">
+                                <i class="bi bi-person-circle" style="font-size: 8rem;"></i>
+                                <h3 th:text="${sessionUser.name}"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card shadow">
+                        <div class="card-body "style="background-color:lightblue">
+                            <div class="text-center">
+                                <h4 class="mb-4"> User Details </h4>
+
+                                <table class="table table-striped table-hover table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td th:text="${sessionUser.name}"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td th:text="${sessionUser.email}"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone No.</td>
+                                            <td th:text="${sessionUser.phoneno}"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>City</td>
+                                            <td th:text="${sessionUser.city}"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--footer start-->
+    <div th:replace="~{fragments/footer :: crm-footer}"></div>
+    <!--footer ends-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

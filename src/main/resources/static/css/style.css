@@ -1,0 +1,29 @@
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(28, 28, 28);
+}
+
+.sidebar .nav-link {
+    color: white;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.content
+{
+    width: 80%;
+    margin-left: 20%;
+    padding: 30px;
+}
+.logophoto
+		{
+	        border-radius: 50%;
+  			width: 70px;
+  			height: 70px;
+  			margin-top: 10px;
+  			margin-left: 20px;
+		}
