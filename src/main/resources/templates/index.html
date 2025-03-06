@@ -13,8 +13,8 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" th:href="@{/css/style.css}" />
 	<link rel="stylesheet" th:href="@{/css/footerstyle.css}" />
-	<link rel="stylesheet" th:href="@{/css/col.css}" />
-
+	<link rel="stylesheet" th:href="@{/css/headerColorAndLogo.css}" />
+	<link rel="stylesheet" th:href="@{/css/middle_cart.css}" />
 </head>
 
 <body>
@@ -45,7 +45,7 @@
 
 			<div class="box-cont">
 				<!------------1st course start------------->
-				<div th:each="course : ${coursesList}" class="box">
+				<div class="box" th:each="course : ${coursesList}">
 					<img th:src="@{${course.imageUrl}}" alt="">
 					<h3><span th:text="${course.name}"></span></h3>
 					<p><span th:text="${course.description}"></span></p>
