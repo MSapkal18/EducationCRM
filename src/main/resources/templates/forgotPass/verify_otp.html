@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>verify OTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .reset-box {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+        }
+
+        .reset-box img {
+            width: 35%;
+            margin-bottom: 15px;
+        }
+
+        .input-field {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .reset-btn {
+            background-color: #2daf3e;
+            color: white;
+            width: 30%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .reset-btn:hover {
+            background-color: #087c3c;
+        }
+
+        .alert {
+            padding: 10px;
+            background-color: #4df58d;
+            color: rgb(132, 81, 197);
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: rgb(184, 185, 187);
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="reset-box">
+        <img src="images/authen.png" alt="Logo">
+        <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            We have sent OTP to your email..
+        </div>
+
+        <form action="forOTP" method="post">
+            <input name="email" required="requireds" type="email" class="input-field" placeholder="OTP">
+            <button class="reset-btn">Verify</button>
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password - Instagram Clone</title>
+
+
+    <title>Reset Password</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,10 +66,13 @@
             <img src="" alt="Logo">
             <h3>Reset Password</h3>
             <p>Enter your email</p>
-            <input type="text" class="input-field" placeholder="Email">
-            <button class="reset-btn">Send OTP</button>
+            <form action="forOTP" method="post">
+
+                <input name="email" required="requireds" type="email" class="input-field" placeholder="Email">
+                <button class="reset-btn">Send OTP</button>
+            </form>
             <div class="back-login">
-                <a href="login.html">Back to Login</a>
+                <a href="login" >Back to Login</a>
             </div>
         </div>
     </div>
