@@ -1,0 +1,51 @@
+<header th:fragment="crm-header">
+	<!------------nav bar start------------->
+<nav class="navbar navbar-expand-lg headercolor">
+            <div class="container">
+                <a class="navbar-brand" href="/index">
+                    <img class="logophoto" src="images/logo5.jpeg" alt="">
+                    <span class="logo">Vega class</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/upcoming">Upcoming</a>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu cl">
+                                <li><a class="dropdown-item" href="#">Online classes</a></li>
+                                <li><a class="dropdown-item" href="/democlass">Demo class</a></li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+								<li><a class="dropdown-item" href="adminLogin">Login as Admin</a></li>
+								<li><a class="dropdown-item" href="/employeeLogin">Login as employee</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="/login" class="btn btn-info ms-4"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Login</a>
+                    <a href="/register" class="btn btn-info ms-2"
+                        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Register</a>
+                </div>
+            </div>
+        </nav>
+        <!------------nav bar end------------->
+</header>

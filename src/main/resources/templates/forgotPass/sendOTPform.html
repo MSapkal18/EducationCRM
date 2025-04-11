@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Reset Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        .reset-box {
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+        }
+        .reset-box img {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .reset-btn {
+            background-color: #0095f6;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .reset-btn:hover {
+            background-color: #007acc;
+        }
+        .back-login {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+        .back-login a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- main content starts -->
+<main class="container-fluid" style="min-height: 550px;">
+
+    <!-- content -->
+    <section class="container py-5 bg-light">
+        <div class="row justify-content-center">
+            <!--  card for get email and send otp start -->
+            <div class="col-lg-4 col-md-6">
+                <form action="forOTP" method="post">
+                    <div class="card shadow p-5">
+                        <h3>Reset Password</h3>
+                        <p>Enter your email</p>
+                        <div th:if="${errorMsg}" class="mb-3 alert alert-danger" role="alert">
+                            <span th:text="${errorMsg}"></span>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="email" required="requireds" class="input-field" placeholder="Email"/>
+                            <div id="emailHelp" class="form-text">
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send OTP</button>
+                        <!-- <div class="separator">OR</div> -->
+                        <div class="back-login">
+                            <a href="/login" >Back to login</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--  card ends -->
+
+        </div>
+    </section>
+</main>
+<!-- main content ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
