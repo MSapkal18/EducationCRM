@@ -51,7 +51,7 @@ public class ForgotController
 
 
             //Code for send OTP to email
-            String subject = "OTP from vega education to verify your ";
+            String subject = "OTP from SS education to verify your ";
             String message = ""
                     + "<div style='border:1px solid #e2e2e2; padding:20px'>"
                     + "<h1>"
